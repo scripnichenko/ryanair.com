@@ -30,11 +30,11 @@ Cucumber Feature story available here [src/test/resources/features/checkDeclined
 
 # Tech Stack
 Test was implemented using BDD approach based on next technologies:
-- Maven
-- Selenide
-- Junit
-- Cucumber
-- Allure
+- Maven 3.3.9
+- Selenide 4.10
+- Junit 4.12
+- Cucumber 1.2.5
+- Allure 2.6.0
 
 Classes are organized  according to Page Object design pattern.
 

@@ -35,5 +35,6 @@ Test was implemented using BDD approach based on next technologies:
 - Junit
 - Cucumber
 - Allure
+
 Classes are organized  according to Page Object design pattern.
 

@@ -1,0 +1,16 @@
+# Project artifacts
+target/
+build/
+allure-results
+allure-report
+
+# IntelliJ project files
+.idea
+*.iml
+
+### Java template
+# Compiled class file
+*.class
+
+# Log file
+*.log

@@ -1,6 +1,5 @@
 package pages;
 
-import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
@@ -14,14 +13,14 @@ import static jdk.nashorn.internal.objects.NativeString.trim;
 
 public class Payment {
 
-    private String accountEmail = "flytowro@zoho.eu";
-    private String accountPass = "MyRyanair2018";
-    private String cardType = "MasterCard";
-    private String cardHolderName = "Xero Xero";
-    private String billingAddress1 = "Wallonia, 25 ";
-    private String billingAddress2 = "Wallonia, 26 ";
-    private String billingCity = "Amougies";
-    private String billingPostcode = "5369965";
+    private final String accountEmail = "flytowro@zoho.eu";
+    private final String accountPass = "MyRyanair2018";
+    private final String cardType = "MasterCard";
+    private final String cardHolderName = "Xero Xero";
+    private final String billingAddress1 = "Wallonia, 25 ";
+    private final String billingAddress2 = "Wallonia, 26 ";
+    private final String billingCity = "Amougies";
+    private final String billingPostcode = "5369965";
 
 
     private SelenideElement blockLoginRegister = $("div.checkout-compact");
@@ -56,8 +55,8 @@ public class Payment {
 
     private SelenideElement messagePaymentDeclinedError = $("prompt.error.prompt-text[text='common.components.payment_forms.error_explain_declined']");
     private SelenideElement titleErrorMessage = $("div.info-title");
-    private String textMessagePaymentDeclinedError = "As your payment was not authorised we could not complete your reservation. Please ensure that the information was correct or use a new payment to try again";
-    private String textTitleErrorMessage = "Oh. There was a problem";
+    private final String textMessagePaymentDeclinedError = "As your payment was not authorised we could not complete your reservation. Please ensure that the information was correct or use a new payment to try again";
+    private final String textTitleErrorMessage = "Oh. There was a problem";
 
 
     @Step

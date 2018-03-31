@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/scripnichenko/ryanair.com.svg?branch=master)](https://travis-ci.org/scripnichenko/ryanair.com)
+
 # Quick Start
 --------------
 Clone/Download repository and execute next commands under the _ryanair.com_ package.

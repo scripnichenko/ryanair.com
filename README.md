@@ -1,4 +1,6 @@
 [![Build Status](https://travis-ci.org/scripnichenko/ryanair.com.svg?branch=master)](https://travis-ci.org/scripnichenko/ryanair.com)
+[![Maintainability](https://api.codeclimate.com/v1/badges/f4e5fdb4bc6904484767/maintainability)](https://codeclimate.com/github/scripnichenko/ryanair.com/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/f4e5fdb4bc6904484767/test_coverage)](https://codeclimate.com/github/scripnichenko/ryanair.com/test_coverage)
 
 # Quick Start
 --------------

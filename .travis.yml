@@ -10,9 +10,11 @@ before_install:
   - curl -L https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-`uname -s`-`uname -m` > docker-compose
   - chmod +x docker-compose
   - sudo mv docker-compose /usr/local/bin
-  - # start your web application and listen on `localhost`
+ # -  start your web application and listen on `localhost`
 #  - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
-script: mvn clean test -Dselenide.browser=chrome -Dremote=http://localhost:4444/wd/hub
+script:
+  - docker-compose up
+  - mvn clean test -Dselenide.browser=chrome -Dremote=http://localhost:4444/wd/hub
 branches:
   only:
   - master

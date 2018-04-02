@@ -1,0 +1,12 @@
+{
+  "chrome": {
+    "default": "65.0",
+    "versions": {
+      "65.0": {
+        "image": "selenoid/vnc:chrome_65.0",
+        "port": "4444",
+        "path": "/wd/hub"
+      }
+    }
+  }
+}

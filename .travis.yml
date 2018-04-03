@@ -11,17 +11,18 @@ env:
 services:
   - docker
 before_install:
-- echo -n | openssl s_client -connect https://scan.coverity.com:443 | sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p' | sudo tee -a /etc/ssl/certs/ca-
+#- echo -n | openssl s_client -connect https://scan.coverity.com:443 | sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p' | sudo tee -a /etc/ssl/certs/ca-
 - docker run --rm -v /var/run/docker.sock:/var/run/docker.sock -v ${HOME}:/root -e OVERRIDE_HOME=${HOME} aerokube/cm:latest-release selenoid start --vnc --tmpfs 128
 addons:
-  coverity_scan:
-    project:
-      name: "scripnichenko/ryanair.com"
-      description: "Test Project"
-    notification_email: scrip.a.v@gmail.com
-    build_command_prepend: "script"
-    build_command: "mvn install -DskipTests=true"
-    branch_pattern: master
+  chrome: stable
+#  coverity_scan:
+#    project:
+#      name: "scripnichenko/ryanair.com"
+#      description: "Test Project"
+#    notification_email: scrip.a.v@gmail.com
+#    build_command_prepend: "script"
+#    build_command: "mvn install -DskipTests=true"
+#    branch_pattern: master
 #before_install:
 #  - sudo rm /usr/local/bin/docker-compose
 #  - curl -L https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-`uname -s`-`uname -m` > docker-compose
@@ -32,7 +33,6 @@ addons:
 script:
 #  - mvn install -DskipTests=true
 #  - docker-compose up
-  - mvn install -DskipTests=true
   - mvn clean test -Dselenide.browser=chrome -Dremote=http://localhost:4444/wd/hub
 branches:
   only:

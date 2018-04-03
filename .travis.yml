@@ -1,20 +1,24 @@
 language: java
 sudo: required
 dist: trusty
-env:
-  - DOCKER_COMPOSE_VERSION=1.20.0
+#env:
+#  - DOCKER_COMPOSE_VERSION=1.20.0
+services:
+  - docker
+before_install:
+- docker run --rm -v /var/run/docker.sock:/var/run/docker.sock -v ${HOME}:/root -e OVERRIDE_HOME=${HOME} aerokube/cm:latest-release selenoid start --vnc --tmpfs 128
 addons:
   chrome: stable
-before_install:
-  - sudo rm /usr/local/bin/docker-compose
-  - curl -L https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-`uname -s`-`uname -m` > docker-compose
-  - chmod +x docker-compose
-  - sudo mv docker-compose /usr/local/bin
+#before_install:
+#  - sudo rm /usr/local/bin/docker-compose
+#  - curl -L https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-`uname -s`-`uname -m` > docker-compose
+#  - chmod +x docker-compose
+#  - sudo mv docker-compose /usr/local/bin
  # -  start your web application and listen on `localhost`
 #  - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
 script:
-  - mvn install -DskipTests=true
-  - docker-compose up
+#  - mvn install -DskipTests=true
+#  - docker-compose up
   - mvn clean test -Dselenide.browser=chrome -Dremote=http://localhost:4444/wd/hub
 branches:
   only:

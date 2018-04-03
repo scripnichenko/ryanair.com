@@ -4,6 +4,11 @@
 [ ![Codeship Status for scripnichenko/ryanair.com](https://app.codeship.com/projects/7ef47400-1755-0136-132a-62d3e5681ad2/status?branch=master)](https://app.codeship.com/projects/283817)
 [![Docker Pulls](https://img.shields.io/docker/pulls/askrypnychenko0808/ryanair.com.svg)](https://hub.docker.com/r/askrypnychenko0808/ryanair.com)
 
+<a href="https://scan.coverity.com/projects/scripnichenko-ryanair-com">
+  <img alt="Coverity Scan Build Status"
+       src="https://scan.coverity.com/projects/15381/badge.svg"/>
+</a>
+
 Docker Hub: 
 <a href="https://hub.docker.com/r/askrypnychenko0808/ryanair.com/">https://hub.docker.com/r/askrypnychenko0808/ryanair.com/</a>
 # Quick Start

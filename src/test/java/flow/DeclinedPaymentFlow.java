@@ -30,6 +30,7 @@ public class DeclinedPaymentFlow {
         Configuration.collectionsTimeout = 8000;
         Configuration.baseUrl = "https://www.ryanair.com/ie/en";
         Configuration.reportsFolder = "target/surefire-reports";
+        Configuration.browserSize = "1024x768";
 //        Configuration.headless=true;
         open("/");
     }
